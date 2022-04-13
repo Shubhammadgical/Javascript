@@ -7,6 +7,39 @@
 let firstName = "shubham";
 console.log(firstName);
 
+// 12th Data types
+let javascriptIsFun = true;
+console.log(typeof javascriptIsFun);
+console.log(typeof 23);
+console.log(typeof "hello");
+
+javascriptIsFun = "YES";
+console.log(typeof javascriptIsFun);
+
+let year;
+console.log(year);
+console.log(typeof year);
+
+year = 1991;
+console.log(year);
+console.log(typeof year);
+
+console.log(typeof null);
+
+// 13th let, const and var
+let age=23;
+console.log(age);
+age=22;
+console.log(age);
+
+const birthYear = 1997;
+//birthYear = 1998;
+// const job;
+
+lastName = "Chaurasia";
+console.log(lastName);
+
+
 // values and variables
 let country = "Portugal";
 let continent="Europe";
