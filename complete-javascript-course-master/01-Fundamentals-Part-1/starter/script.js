@@ -1,13 +1,13 @@
-// 9th Linking a javascript file
+// 9th : Linking a javascript file
 // let js = "amazing";
 // if(js === "amazing") alert("Javascript is FUN");
 // console.log(10 + 5 - 2);
 
-// 10th values and variables
+// 10th : values and variables
 let firstName = "shubham";
 console.log(firstName);
 
-// 12th Data types
+// 12th : Data types
 let javascriptIsFun = true;
 console.log(typeof javascriptIsFun);
 console.log(typeof 23);
@@ -26,7 +26,7 @@ console.log(typeof year);
 
 console.log(typeof null);
 
-// 13th let, const and var
+// 13th : let, const and var
 let age=23;
 console.log(age);
 age=22;
@@ -39,6 +39,45 @@ const birthYear = 1997;
 lastName = "Chaurasia";
 console.log(lastName);
 
+// 14th : Basic Operators
+
+        //math operators
+const now = 2034;
+const ageJonas = now - 1991;
+const ageSarah = now - 2018;
+console.log(ageJonas,ageSarah);
+
+console.log(ageJonas * 2, ageSarah / 10, 2 ** 3);
+
+const firstName_ = "Jonas";
+const lastName_ = "Sched";
+console.log(firstName_ + " " + lastName_);
+
+        //assignment operators
+let x = 10 + 5;
+x += 10;
+x *= 4;
+x++;
+x--;
+console.log(x);
+
+        //comparison operators
+console.log(ageJonas > ageSarah);
+console.log(ageJonas >= 18);
+console.log(ageJonas <= 18);
+console.log(ageJonas < ageSarah);
+
+
+
+
+
+
+
+
+
+
+
+// Practice Assignment
 
 // values and variables
 let country = "Portugal";
@@ -169,3 +208,5 @@ console.log(
     `${country3}'s population is ${population3 > 33 ? 'above' :
     'below'} average`,
 );
+
+
