@@ -67,6 +67,96 @@ console.log(ageJonas >= 18);
 console.log(ageJonas <= 18);
 console.log(ageJonas < ageSarah);
 
+// 15th : Operator Precedence
+let a, y, z;
+a = 25 - 10 - 5;
+console.log(a);
+y = z = 25 - 10 - 5;
+console.log(y, z);
+
+console.log(ageJonas, ageSarah);
+const averageAge = (ageJonas + ageSarah) / 2;
+console.log(averageAge);
+
+
+// 16th : Coding Challenge #1
+let markWeight = 78;
+let markHeight = 1.69;
+let johnWeight = 92;
+let johnHeight = 1.95;
+
+const markBMI = markWeight / (markHeight ** 2);
+const jhonBMI = johnWeight / (johnHeight * johnHeight);
+const markHighterBMI = markBMI > jhonBMI;
+
+console.log(markBMI, jhonBMI , markHighterBMI);
+
+// 17th Strings and Template Literals
+const firstName1 = "shubham";
+const job = "Software Engg.";
+const birthYear1 = 1997;
+const year1 = 2022;
+
+const shubham = "I'm " + firstName1 + ", a " + (year1 - birthYear1) + " years old " + job + "!";
+console.log(shubham);
+
+const shubh = `I'm ${firstName1}, a ${year1 - birthYear1} years old ${job}!`;
+console.log(shubh);
+
+console.log('hello \n\
+my name is\n\
+shubham');
+
+console.log(`hello
+my name is
+shubham`);
+
+// 18th : Taking Decisions: if / else Statements
+const age1= 17;
+const isOldEnough = age1 >= 18;
+if(isOldEnough){
+    console.log("shubham can start driving")
+}else{
+    console.log("shubham can't start driving")
+}
+
+const birthYear2 = 2012;
+let century;
+if(birthYear2 <=2000){
+    century=20;
+}else{
+    century=21;
+}
+console.log(century);
+
+// 19th : Coding challenge #2
+console.log(markBMI, jhonBMI);
+if(markBMI > jhonBMI){
+    console.log(`Mark's BMI ${markBMI} is higher than John's ${jhonBMI}!`);
+}else{
+    console.log(`John's BMI ${jhonBMI} is higher than Mark's ${markBMI}!`);
+}
+
+//20th : Type Conversion and Coercion
+
+            //Type Conversion
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 10);
+
+console.log(Number('shubham'));
+console.log(typeof NaN);
+
+console.log(String(23), 23);
+
+            //Type Coercion
+console.log("I am " + 23 + "years old");
+console.log("23" - "10" - 3);//number
+console.log("23" / "2");
+
+let n = "1" + 1;//string
+n = n - 1;//number
+console.log(n);
 
 
 
