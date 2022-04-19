@@ -158,6 +158,155 @@ let n = "1" + 1;//string
 n = n - 1;//number
 console.log(n);
 
+// 21th : Truthy and Falsy Values
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("shubham"));
+console.log(Boolean({}));
+console.log(Boolean(""));
+
+const money= 100;
+if(money){
+    console.log("i have money");
+}else{
+    console.log("i don't have money")
+}
+
+let height=0;
+if(height){
+    console.log("defined");
+}else{
+    console.log("undefined")
+}
+
+// 22th : Equality Operators: == vs. ===
+
+
+const age2 = '18';
+if(age2 === 18) console.log("strict");
+if(age2 == 18) console.log("loose");
+
+const favNumber =Number (prompt("What is your favourite number?"));
+console.log(favNumber);
+if(favNumber === 22){
+    console.log(`${favNumber} is Number`)
+}else if(favNumber === 20){
+    console.log(`${favNumber} is number`)
+}else{
+    console.log("Number is not 22 or 20")
+}
+
+if( favNumber !== 20) console.log("Why not 20?");
+
+// 23th : Boolean logic
+let one=1;
+let two=2;
+if(one===1 && two===2){
+    console.log("AND");
+}
+if(one===1 || two===2){
+    console.log("OR");
+}
+if(one!==2 && two===2){
+    console.log("AND");
+}
+
+// 24th : Logical Operators
+const hasDriversLicense = true;
+const hasGoodVision = true;
+const isTired = false;
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+if(hasDriversLicense && hasGoodVision && !isTired){
+    console.log("Sarah is able to drive!");
+}else{
+    console.log("Someone else should drive...")
+}
+
+// 25th : Coding Challenge #3
+// const scoreDolphins = (96 + 108 + 89) / 3;
+// const scoreKoalas = (88 + 91 + 110) / 3;
+// console.log(scoreDolphins, scoreKoalas)
+// if(scoreDolphins > scoreKoalas){
+//     console.log("Dolphins Wins");
+// }else if(scoreDolphins < scoreKoalas){
+//     console.log("Koalas Wins");
+// }else{
+//     console.log("Both Wins")
+// }
+
+const scoreDolphins = (97 + 112 + 101) / 3;
+const scoreKoalas = (109 + 95 + 106) / 3;
+console.log(scoreDolphins, scoreKoalas)
+if(scoreDolphins > scoreKoalas && scoreDolphins >= 100){
+    console.log("Dolphins Wins");
+}else if(scoreDolphins < scoreKoalas && scoreKoalas >= 100){
+    console.log("Koalas Wins");
+}else if(scoreDolphins === scoreKoalas && scoreDolphins >= 100 && scoreKoalas >= 100){
+    console.log("Both Wins")
+}else{
+    console.log("No one wins")
+}
+
+// 26th : Switch Statement
+const  day = "thursday";
+switch(day){
+    case "monday" : console.log(day)
+    break;
+    case "tuesday" : console.log(day)
+    break;
+    case "wednesday" : console.log(day)
+    break;
+    case "thursday" : console.log(day)
+    break;
+    case "friday" : console.log(day)
+    break;
+    case "satarday" : console.log(day)
+    break;
+    case "sunday" : console.log(day)
+    break;
+    default:
+        console.log("Not a valid day");
+}
+
+if(day === "monday"){
+    console.log(day)
+}else if(day === "tuesday"){
+    console.log(day)
+}else if(day === "wednesday" || day === "thursday"){
+    console.log(day)
+}else if(day === "friday"){
+    console.log(day)
+}else if(day === "saturday" || day === "sunday"){
+    console.log(day)
+}else {
+    console.log("Not a valid day");
+}
+
+// 27th statements and expressions
+//expressions
+3 + 4
+1234
+true && false && !false
+const me="shubham";
+if(23 > 10){//statement
+    const str=`hello ${me}`;//expression
+}
+
+// 28th : The Conditional (Ternary) Operator
+const age3= 13;
+age3 >= 18 ? console.log("greater") : console.log("smaller")
+
+console.log(`my height is ${age3 >= 18 ? "greater" : "smaller"} than you`)
+
+// 29th : Coding challenge #4
+const bill = 400;
+const tip = bill <=300 && bill >= 50 ? bill*.15 : bill*0.2;
+console.log(`The bill was ${bill}, the tip was ${tip} and the total value is ${bill+tip}`)
+
 
 
 
@@ -300,3 +449,4 @@ console.log(
 );
 
 
+// 30th : JavaScript Releases: ES5, ES6+ and ESNext
