@@ -1,3 +1,87 @@
+'use strict';
+// 31th : Intro
+// 32th : Activating Strict Mode
+let hasDriversLicense = false;
+const passTest = true;
+
+if(passTest) hasDriversLicense = true;
+if(hasDriversLicense) console.log("I can drive");
+
+//const private = 123;
+
+// 33th : Functions
+function logger(){
+    console.log("hello");
+}
+logger();
+
+function fruitProcessor(apples, oranges){
+    const juice = `${apples} apples and ${oranges} oranges`;
+    return juice;
+}
+const juice = fruitProcessor(3,5);
+console.log(juice);
+console.log(fruitProcessor(3,5));
+
+// 34th : Function Declarations vs. Expressions
+            //function declarations
+function calAge(birthYear){
+    return 2022 - birthYear;
+}
+const age4 = calAge(1997);
+            //function Expression
+const calAge1 = function (birthYear){
+    return 2022 - birthYear;
+}
+const age5 = calAge1(1997);
+console.log(age4, age5);
+
+// 35th : Arrow Function
+
+const calAge2 = birthYear => 2022 - birthYear;
+console.log(calAge2(1997));
+
+const years=(birthYear, firstName)=>{
+    const age = 2022 - birthYear;
+    const retirement = 65 - age;
+    return `${firstName} retires in ${retirement}`;
+}
+console.log(years(1997,"shubham"));
+
+// 36th : Functions Calling Other Functions
+const cutPieces = function (fruit){
+    return fruit * 4;
+}
+
+function fruitProcessor1(apples, oranges){
+    const applePieces = cutPieces(apples);
+    const orangesPieces = cutPieces(oranges);
+    const juice = `${apples} apples ${applePieces} pieces and ${oranges} oranges ${orangesPieces} pieces`;
+    return juice;
+}
+console.log(fruitProcessor1(2 ,3));
+
+// 37th : Reviewing Functions
+const calAge3 = function(birthYear){
+    return 2037 - birthYear;
+}
+
+const years1= function (birthYear, firstName){
+    const age = calAge3(birthYear);
+    const retirement = 65 - age;
+    if(retirement>0){
+    return `${firstName} retires in ${retirement}`;
+    }else{
+        return -1;
+    }
+}
+console.log(years1(1970,"shubham"));
+
+
+
+
+
+
 // Functions
 function describeCountry(country, population,capitalCity){
     return `${country} has ${population} million people and its capital city is ${capitalCity}.`;
@@ -153,4 +237,3 @@ while (i < populations.length) {
     i++;
 }
 console.log(percentages3);
-
