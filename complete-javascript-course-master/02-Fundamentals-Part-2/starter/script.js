@@ -241,12 +241,112 @@ if(Mark.bmi > John.bmi){
     console.log(`${John.fullName}'s BMI ${John.bmi} is heigher than ${Mark.fullName}'s BMI ${Mark.bmi} `);
 }
 
+// 46th : Iteration: The for Loop
+for(let i=1 ; i<=10 ; i++){
+    console.log(i);
+}
+
+// 47th : Looping Arrays, Breaking and Continuing
+const shubhamArray = [
+    "Shubham",
+    "Chaurasia",
+    2022 - 1997,
+    "Software Engg.",
+    ["Om", "Rhohit", "Narendra"]
+];
+const types=[];
+for(let i=0; i<shubhamArray.length ; i++){
+    console.log(shubhamArray[i]);//read
+    //types[i]= typeof shubhamArray[i];//filling
+    types.push(typeof shubhamArray[i]);
+}
+console.log(types);
+
+const years4 = [1992, 2007, 1969, 2020];
+const ages1 = [];
+
+for(let i=0 ; i<years4.length ;i++){
+    ages1.push(2022 - years4[i]);
+}
+console.log(ages1);
+
+            //continue
+for(let i=0; i<shubhamArray.length ; i++){
+    if(typeof shubhamArray[i] !== "string") continue;
+    console.log(shubhamArray[i], typeof shubhamArray[i]);
+}
+            //break
+for(let i=0; i<shubhamArray.length ; i++){
+    if(typeof shubhamArray[i] === "number") break;
+    console.log(shubhamArray[i], typeof shubhamArray[i]);
+}
+
+// 48th : Looping Backwards and Loops in Loops
+const shubhamArray1 = [
+    "Shubham",
+    "Chaurasia",
+    2022 - 1997,
+    "Software Engg.",
+    ["Om", "Rhohit", "Narendra"]
+];
+for(let i=shubhamArray1.length-1; i>=0; i--){
+    console.log(i,shubhamArray1[i]);
+}
+
+for(let i=1 ; i<4 ; i++){
+    console.log(`-------------${i}------------`)
+    for(let y=1; y<6; y++){
+        console.log(`Excercise : ${i} : Line ${y}`);
+    }
+}
+
+// 49th : While Loop
+let num=1;
+while(num <= 10){
+    console.log(`Number ${num}`);
+    num++;
+}
+let dice = Math.trunc(Math.random() * 6) + 1 ;
+console.log(dice);
+while(dice !== 6){
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1 ;
+    if(dice === 6) console.log("6")
+}
+
+// 50th : Coding Challenge #4
+const calcTips1 = function(bill){
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+const bills1= [22,295,176,440,37,105,10,1100,89,52];
+const tips1 = [];
+const totals1 = [];
+
+for(let i=0 ;i<bills1.length;i++){
+    const tip = calcTips1(bills1[i]);
+    tips1.push(tip);
+    totals1.push(tip+bills1[i]);
+}
+console.log(bills1,tips1,totals1);
+
+const calcAvg1 = function(arr){
+    let sum=0;
+    for(let i=0;i<arr.length;i++){
+        sum += arr[i];
+    }
+    console.log(sum);
+    return sum/arr.length;
+}
+console.log(calcAvg1([3,4,5]));
+console.log(calcAvg1(totals1));
+console.log(calcAvg1(tips1));
 
 
 
 
 
 
+//Assignments
 
 
 // Functions
@@ -407,4 +507,3 @@ console.log(percentages3);
 
 
 
-// 46th : Iteration: The for Loop
