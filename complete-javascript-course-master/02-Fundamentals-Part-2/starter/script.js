@@ -77,6 +77,173 @@ const years1= function (birthYear, firstName){
 }
 console.log(years1(1970,"shubham"));
 
+// 38th : Coding Challenge #1
+
+function calcAvg(score1, score2, score3){
+    let avg = (score1 + score2 + score3) / 3 ;
+    return avg;
+}
+console.log(calcAvg(3,4,5));
+
+let scoreDolphins = calcAvg(44, 23, 71);
+let scoreKoalas = calcAvg(65, 54, 49);
+console.log(scoreDolphins, scoreKoalas);
+
+function checkWinner(avgDolphins, avgKoalas){
+    if(avgDolphins >= 2 * avgKoalas){
+        console.log(`Dolphins win ${avgDolphins} Vs.${avgKoalas}`)
+    }else if(avgKoalas >= 2 * avgDolphins){
+        console.log(`Koalas win ${avgKoalas} Vs. ${avgDolphins}`)
+    }else{
+        console.log("No one wins");
+    }
+}
+checkWinner(scoreDolphins, scoreKoalas);
+checkWinner(400,150);
+
+scoreDolphins = calcAvg(85, 54, 41);
+scoreKoalas = calcAvg(23, 34, 27);
+checkWinner(scoreDolphins, scoreKoalas);
+
+// 39th : Introduction to Arrays
+let friends = ["Shubham", "Om", "Rohit"];
+console.log(friends);
+
+let years2 = new Array(1997, 1998, 1999);
+console.log(years2);
+console.log(years2[2]);
+console.log(years2.length);
+
+friends[2]="Narendra";
+console.log(friends);
+
+let firstName1= 'Jhon';
+const jhon = [firstName1, "shubham", 30-18, "teacher", friends];
+console.log(jhon);
+
+const calAge4 = function(birthYear){
+    return 2037 -birthYear;
+}
+const years3 = [1990,1798, 2021, 2018];
+
+const ages = [calAge4(years3[0]), calAge4(years3[1]),calAge4(years3[years3.length-1])]
+console.log(ages);
+
+// 40th : Basic Array Operations (Methods)
+let friends1 = ["Shubham", "Om", "Rohit"];
+friends1.push("Jack");
+console.log(friends1);
+console.log(friends1.length);
+friends1.unshift("Jaky");
+console.log(friends1);
+
+friends1.pop();
+console.log(friends1);
+
+friends1.shift();
+console.log(friends1);
+
+console.log(friends1.indexOf('Om'));
+console.log(friends1.includes('Om'));
+
+// 41th : Coding Challeng #2
+const calcTips = function(bill){
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+const bills= [125, 555, 44];
+const tips = [calcTips(bills[0]),calcTips(bills[1]),calcTips(bills[2])];
+const totals = [bills[0]+tips[0], bills[1]+tips[1], bills[2]+tips[2] ];
+console.log(bills, tips, totals);
+
+// 42th : Introduction to Objects
+const shubham= {
+    firstName: "Shubham",
+    lastName: "Chaurasia",
+    age: 2022 - 1997,
+    job: "Software Engg.",
+    friends: ["Om", "Rhohit", "Narendra"]
+};
+console.log(shubham);
+
+// 43th : Dot vs. Bracket Notation
+console.log(shubham.firstName);
+console.log(shubham['lastName']);
+
+const nameKey = "Name";
+console.log(shubham['first'+nameKey]);
+console.log(shubham['last'+nameKey]);
+
+//console.log(shubham.'first' + nameKey);
+const interestedIn = prompt("what do you want to know about shubham? Choose between firstName, lastName, job, age and friends");
+if(shubham[interestedIn]){
+console.log(shubham[interestedIn]);
+}else{
+    console.log("wrong request!  Choose between firstName, lastName, job, age and friends");
+}
+
+shubham.joblocation = "Noida";
+shubham['salary'] = 21500;
+console.log(shubham);
+
+console.log(`${shubham.firstName} has ${shubham.friends.length} feiends, and his best friend is called ${shubham.friends[0]}`)
+
+// 44th : Object Methods
+const jonas= {
+    firstName: "Shubham",
+    lastName: "Chaurasia",
+    birthYear: 1997,
+    job: "Software Engg.",
+    friends: ["Om", "Rhohit", "Narendra"],
+    hasDriversLicense: false,
+    // calcAge: function (birthYear){
+    //     return 2022 - birthYear;
+    // }
+    // calcAge: function (){
+    //     return 2022 - this.birthYear;
+    // }
+    calcAge: function (){
+        this.age =2022 - this.birthYear;
+        return this.age;
+    }
+};
+console.log(jonas.calcAge());
+console.log(jonas.age);
+//console.log(jonas['calcAge'](1997));
+
+console.log(`${jonas.firstName} is a ${jonas.age} year old ${jonas.job}, and he has ${jonas.hasDriversLicense ? "a" : "no"} driver's license`)
+
+// 45th : Coding Challenge #3
+let Mark ={
+    fullName: "Mark singh",
+    mass: 78,
+    height: 1.69,
+    calcBMI: function(){
+        this.bmi = this.mass/(this.height*this.height);
+        return this.bmi;
+    }
+}
+let John ={
+    fullName: "John singh",
+    mass: 92,
+    height: 1.95,
+    calcBMI: function(){
+        this.bmi = this.mass/(this.height*this.height);
+        return this.bmi;
+    }
+}
+Mark.calcBMI();
+John.calcBMI();
+
+console.log(Mark.bmi, John.bmi);
+if(Mark.bmi > John.bmi){
+    console.log(`${Mark.fullName}'s BMI ${Mark.bmi} is heigher than ${John.fullName}'s BMI ${John.bmi} `);
+}else{
+    console.log(`${John.fullName}'s BMI ${John.bmi} is heigher than ${Mark.fullName}'s BMI ${Mark.bmi} `);
+}
+
+
+
+
 
 
 
@@ -237,3 +404,7 @@ while (i < populations.length) {
     i++;
 }
 console.log(percentages3);
+
+
+
+// 46th : Iteration: The for Loop
