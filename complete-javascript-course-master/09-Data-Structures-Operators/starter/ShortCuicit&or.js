@@ -42,7 +42,7 @@ console.log(undefined || null);
 
 console.log(undefined || 0 || '' || 'hello' || 23 || null);
 
-restaurant.numGuest = 23;
+//restaurant.numGuest = 0;
 const guest1 = restaurant.numGuest ? restaurant.numGuest : 10;
 console.log(guest1);
 
@@ -59,3 +59,7 @@ if (restaurant.orderPizza) {
 }
 
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+
+// 108th : The Nullish Coalescing Operator (??) null and undefined
+const guestCorrect = restaurant.numGuest ?? 10;
+console.log(guestCorrect);
