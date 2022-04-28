@@ -32,3 +32,43 @@ book.apply(eurowings, flightData);
 console.log(eurowings);
 
 book.call(eurowings, ...flightData);
+
+// Bind Method
+const bookEW = book.bind(eurowings);
+const bookRA = book.bind(RoyalAirLines);
+bookEW(23, 'Shubham');
+bookRA(11, 'chaurasia');
+
+const bookRAL = book.bind(RoyalAirLines, 11);
+bookRAL('Ram');
+bookRAL('Syam');
+
+//With Event Listeners
+RoyalAirLines.planes = 300;
+RoyalAirLines.buyPlane = function () {
+  console.log(this);
+  this.planes++;
+  console.log(this.planes);
+};
+
+document
+  .querySelector('.buy')
+  .addEventListener('click', RoyalAirLines.buyPlane.bind(RoyalAirLines));
+
+// Partial application
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1, 200));
+
+const addVAT = addTax.bind(null, 0.23);
+console.log(addVAT(100));
+console.log(addVAT(50));
+
+const addTaxRate = function (rate) {
+  return function (value) {
+    return value + value * rate;
+  };
+};
+
+const addVAT2 = addTaxRate(0.23);
+console.log(addVAT2(100));
+console.log(addVAT2(50));
